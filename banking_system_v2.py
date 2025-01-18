@@ -31,7 +31,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     excedeu_saques = numero_saques >= limite_saques
 
     if excedeu_saldo:
-        print("\n## Falha na operação! Você não tem saldo suficiente. ##")
+        print("\n## Falha na operação! Saldo suficiente. ##")
 
     elif excedeu_limite:
         print("\n## Falha na operação! O valor do saque excede o limite de saque único. ##")
@@ -66,11 +66,11 @@ def criar_usuario(usuarios):
 
     nome = input("Digite seu nome completo: ")
     data_nascimento = input("Digite sua data de nascimento (dd-mm-aaaa): ")
-    endereco = input("Digite seu endereço (Logradouro, nº - Bairro - Cidade/UF): ")
+    endereco = input("Digite seu endereço (Rua, nº - Bairro - Cidade/UF): ")
 
     usuarios.append({"nome": nome, "data_nascimento": data_nascimento, "cpf": cpf, "endereco": endereco})
 
-    print("\n!!! Usuário criado com sucesso! !!!")
+    print("\n!!! Novo usuário criado com sucesso! !!!")
 
 def filtrar_usuario(cpf, usuarios):
     usuarios_filtrados = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
